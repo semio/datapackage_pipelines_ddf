@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from setuptools import setup
+
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
+
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
+
+requirements = [
+    # TODO: put package requirements here
+]
+
+test_requirements = [
+    # TODO: put package test requirements here
+]
+
+setup(
+    name='datapackage_pipelines_ddf',
+    version='0.1.0',
+    description="DDF plugin for datapackage-pipelines",
+    long_description=readme + '\n\n' + history,
+    author="Semio Zheng",
+    author_email='prairy.long@gmail.com',
+    url='https://github.com/semio/datapackage_pipelines_ddf',
+    packages=[
+        'datapackage_pipelines_ddf',
+    ],
+    package_dir={'datapackage_pipelines_ddf':
+                 'datapackage_pipelines_ddf'},
+    include_package_data=True,
+    install_requires=requirements,
+    license="MIT license",
+    zip_safe=False,
+    keywords='datapackage_pipelines_ddf',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+    ],
+    test_suite='tests',
+    tests_require=test_requirements
+)
